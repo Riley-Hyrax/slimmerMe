@@ -5,6 +5,8 @@ let countdownValue = 60;
 const initialCountdownValue = 60;
 
 function nextQuestion(questionNumber) {
+  document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+
   document.getElementById('question' + questionNumber).style.display = 'none';
 
   if (questionNumber + 1 <= totalQuestions) {
@@ -49,6 +51,9 @@ function generateReferenceNumber() {
 }
 
 function calculateAndNext() {
+
+  document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+
   // Get user input values
   const heightFeet = parseInt(document.getElementById('heightFeet').value);
   const heightInches = parseInt(document.getElementById('heightInches').value);
