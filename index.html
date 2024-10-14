@@ -81,16 +81,15 @@
     
         <!-- Input for Height and Weight -->
         <div class="question" id="question5" style="display:none;">
-          <h2 class="question-heading"></h2>
           <p class="question-p">Enter your current height and weight:</p>
           <div class="input-container">
-            <input type="number" id="heightFeet" min="3" max="7" placeholder="Feet">
+            <input type="number" id="heightFeet" min="3" max="7" placeholder="Feet" required>
             
-            <input type="number" id="heightInches" min="0" max="11" placeholder="Inches">
+            <input type="number" id="heightInches" min="0" max="11" placeholder="Inches" required>
             
-            <input type="number" id="currentWeight" placeholder="Weight in Pounds">
+            <input type="number" id="currentWeight" placeholder="Weight in Pounds" required>
             
-            <input type="number" id="desiredWeight" placeholder="Desired Weight in Pounds">
+            <input type="number" id="desiredWeight" placeholder="Desired Weight in Pounds" required>
             
             <button onclick="calculateAndNext()" class="nextButton">Next</button>
           </div>
@@ -99,7 +98,7 @@
         <!-- Loading Screen -->
         <div id="loadingScreen" style="display:none; text-align:center;">
           <div class="spinner"></div>
-          <p id="loadingMessage">Calculating your weight pace...</p>
+          <p id="loadingMessage">Calculating your BMI...</p>
         </div>
         
         <!-- Final Screen with Dynamic Offer -->
