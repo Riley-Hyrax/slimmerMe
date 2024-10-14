@@ -1,65 +1,120 @@
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slimmer Me | Home</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+    <title>CCW | Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
     <nav class="navbar">
-        <p class="nav-p">Slimmer Me.</p>
+        <h1>SlimmerMe.</h1>
     </nav>
-
-    <section class="section-1" id="section-1">
-        <h1 class="s1-h1">Personalized Weight Loss Hack</h1>
-        <p class="s1-p1">Select Your Age Group</p>
-
-        <div class="s1-container">
-            <div class="s1-block" id="s1-block-1" style="background-image: url(img/1.png);">
-                <div class="s1-block-item" id="s1-block-1-item"><p id="answer-1">Age: 18-29 →</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-2" style="background-image: url(img/2-fin.png);">
-                <div class="s1-block-item" id="s1-block-2-item"><p id="answer-2">Age: 30-39 →</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-3" style="background-image: url(img/asian_lady.png);">
-                <div class="s1-block-item"  id="s1-block-3-item"><p id="answer-3">Age: 40-49 →</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-4" style="background-image: url(img/4.png);">
-                <div class="s1-block-item"  id="s1-block-4-item"><p id="answer-4">Age: 50+ →</p></div>
-            </div>
-        </div>
-        <p class="s1-lower-text">By choosing your age and continuing you agree to our <a href="">Terms of Service</a> 
-            | <a href="">Privacy Policy</a> <br>Please review before continuing</p>
-    </section>
-
-    <section class="section-2" id="section-2">
-        <h1 class="s1-h1">Personalized Weight Loss Meal Plan</h1>
-        <p class="s1-p1">How would you describe your build</p>
-
-        <div class="s1-container">
-            <div class="s1-block" id="s1-block-1" style="">
-                <div class="s1-block-item" id="s1-block-1-item"><p id="answer-1">Slim</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-2" style="">
-                <div class="s1-block-item" id="s1-block-2-item"><p id="answer-2">Middle Sized</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-3" style="">
-                <div class="s1-block-item"  id="s1-block-3-item"><p id="answer-3">Plus Sized</p></div>
-            </div>
-            <div class="s1-block" id="s1-block-4" style="">
-                <div class="s1-block-item"  id="s1-block-4-item"><p id="answer-4">Significantly Overweight</p></div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="button-container">
-        <button class="stage-button" id="previous-button">Previous</button>
-        <button class="stage-button" id="next-button">Next</button>
+    <div class="s1-h1-container">
+      <h1 class="s1-h1">
+        Shocking: The Secret Weight Loss Trick Celebrities Swear By
+    </h1>
+    <p class="s1-p2">Tailored To You</p>
     </div>
-
-
+ <!--
+    <section class="section-1">
+        
+        <div class="hero-image" style="background-image: url(img/vet-img.webp);"></div>
+        <p class="s1-p1">
+            This new initiative allows veterans who have their DD214 to <b>instantly qualify for their concealed permit online</b> using this new website and bypass all the strenuous checks and lengthy application processes.
+            <br><br>
+            Act now, before the initiative ends on the <b>31st</b> and join thousands of veterans who have got their permits online.
+            <br><br>
+            Answer the Quiz below to Qualify Now ⬇️
+        </p>
+    </section>
+-->
+    <section class="section-2">
+      <!-- Quiz Questions -->
+      <div class="quiz-container" id="quizContainer">
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="question" id="question1">
+          <h2 class="question-heading"></h2>
+          <p class="question-p">Choose Your Age:</p>
+          <div class="button-container">
+            <button onclick="nextQuestion(1)" style="background-image: url('img/vet-img.webp');">18-29</button>
+            <button onclick="nextQuestion(1)">30-39</button>
+            <button onclick="nextQuestion(1)">40-49</button>
+            <button onclick="nextQuestion(1)">50+</button>
+          </div>
+        </div>
     
+        <div class="question" id="question2" style="display:none;">
+          <h2 class="question-heading"></h2>
+          <p class="question-p">Choose Your Body Type:</p>
+          <div class="button-container">
+            <button onclick="nextQuestion(2)">Slim</button>
+            <button onclick="nextQuestion(2)">Average</button>
+            <button onclick="nextQuestion(2)">Plus-Sized</button>
+          </div>
+        </div>
+    
+        <div class="question" id="question3" style="display:none;">
+          <h2 class="question-heading"></h2>
+          <p class="question-p">Choose Your Dream Body:</p>
+          <div class="button-container">
+            <button onclick="nextQuestion(3)">Slim</button>
+            <button onclick="nextQuestion(3)">Toned</button>
+            <button onclick="nextQuestion(3)">Curvy</button>
+          </div>
+        </div>
+    
+        <div class="question" id="question4" style="display:none;">
+          <h2 class="question-heading"></h2>
+          <p class="question-p">Select Problem Area:</p>
+          <div class="button-container">
+            <button onclick="nextQuestion(4)">Belly</button>
+            <button onclick="nextQuestion(4)">Butt</button>
+            <button onclick="nextQuestion(4)">Legs</button>
+            <button onclick="nextQuestion(4)">Back</button>
+          </div>
+        </div>
+    
+        <!-- Input for Height and Weight -->
+        <div class="question" id="question5" style="display:none;">
+          <h2 class="question-heading"></h2>
+          <p class="question-p">Enter your current height and weight:</p>
+          <div class="input-container">
+            <input type="number" id="heightFeet" min="3" max="7" placeholder="Feet">
+            
+            <input type="number" id="heightInches" min="0" max="11" placeholder="Inches">
+            
+            <input type="number" id="currentWeight" placeholder="Weight in Pounds">
+            
+            <input type="number" id="desiredWeight" placeholder="Desired Weight in Pounds">
+            
+            <button onclick="calculateAndNext()" class="nextButton">Next</button>
+          </div>
+        </div>
+    
+        <!-- Loading Screen -->
+        <div id="loadingScreen" style="display:none; text-align:center;">
+          <div class="spinner"></div>
+          <p id="loadingMessage">Calculating your weight pace...</p>
+        </div>
+        
+        <!-- Final Screen with Dynamic Offer -->
+        <div class="question" id="finalScreen" style="display:none;">
+          <h2 class="question-heading">Your Personalized Weight Loss Plan</h2>
+          <p class="question-p" id="bmiResult"></p>
+          <p class="question-p" id="afterMessage"></p>
+          <button onclick="window.location.href='https://lipozem.com/vsl/'" class="nextButton">Watch Video Now</button>
+        </div>
+      </div>
+    </section>
+    
+    
+      
+
+    <script src="js/script.js"></script>
 </body>
 </html>
