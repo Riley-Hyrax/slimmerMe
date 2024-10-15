@@ -41,10 +41,21 @@
           <h2 class="question-heading"></h2>
           <p class="question-p">Choose Your Age:</p>
           <div class="button-container">
-            <button onclick="nextQuestion(1)" style="background-image: url('img/vet-img.webp');">18-29</button>
-            <button onclick="nextQuestion(1)">30-39</button>
-            <button onclick="nextQuestion(1)">40-49</button>
-            <button onclick="nextQuestion(1)">50+</button>
+            <div class="click-container" onclick="nextQuestion(1)" style="background-image: url('img/18-29.png');">
+              <button onclick="nextQuestion(1)">18-29</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(1)" style="background-image: url('img/30-39.png');">
+              <button onclick="nextQuestion(1)">30-39</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(1)" style="background-image: url('img/40-49.png');">
+              <button onclick="nextQuestion(1)">40-49</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(1)" style="background-image: url('img/50+.png');">
+              <button onclick="nextQuestion(1)">50+</button>
+            </div>
           </div>
         </div>
     
@@ -52,9 +63,17 @@
           <h2 class="question-heading"></h2>
           <p class="question-p">Choose Your Body Type:</p>
           <div class="button-container">
-            <button onclick="nextQuestion(2)">Slim</button>
-            <button onclick="nextQuestion(2)">Average</button>
-            <button onclick="nextQuestion(2)">Plus-Sized</button>
+            <div class="click-container" onclick="nextQuestion(2)" style="background-image: url('img/slim-current.png');">
+              <button onclick="nextQuestion(2)">Slim</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(2)" style="background-image: url('img/average-current.png');">
+              <button onclick="nextQuestion(2)">Average</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(2)" style="background-image: url('img/obesity-current.png');">
+              <button onclick="nextQuestion(2)">Plus-Sized</button>
+            </div>
           </div>
         </div>
     
@@ -62,9 +81,17 @@
           <h2 class="question-heading"></h2>
           <p class="question-p">Choose Your Dream Body:</p>
           <div class="button-container">
-            <button onclick="nextQuestion(3)">Slim</button>
-            <button onclick="nextQuestion(3)">Toned</button>
-            <button onclick="nextQuestion(3)">Curvy</button>
+            <div class="click-container" onclick="nextQuestion(3)" style="background-image: url('img/slim-dream.png');">
+              <button onclick="nextQuestion(3)">Slim</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(3)" style="background-image: url('img/toned-dream.png');">
+              <button onclick="nextQuestion(3)">Toned</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(3)" style="background-image: url('img/curvy-dream.png');">
+              <button onclick="nextQuestion(3)">Curvy</button>
+            </div>
           </div>
         </div>
     
@@ -72,10 +99,20 @@
           <h2 class="question-heading"></h2>
           <p class="question-p">Select Problem Area:</p>
           <div class="button-container">
-            <button onclick="nextQuestion(4)">Belly</button>
-            <button onclick="nextQuestion(4)">Butt</button>
-            <button onclick="nextQuestion(4)">Legs</button>
-            <button onclick="nextQuestion(4)">Back</button>
+            <div class="click-container" onclick="nextQuestion(4)" style="background-image: url('img/obesity-current.png');">
+              <button onclick="nextQuestion(4)">Belly</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(4)" style="background-image: url('img/butt.png');">
+              <button onclick="nextQuestion(4)">Butt</button>
+            </div>
+
+            <div class="click-container" onclick="nextQuestion(4)" style="background-image: url('img/leg.png');">
+              <button onclick="nextQuestion(4)">Legs</button>
+            </div>
+            <div class="click-container" onclick="nextQuestion(4)" style="background-image: url('img/back.png');">
+              <button onclick="nextQuestion(4)">Back</button>
+            </div>
           </div>
         </div>
     
@@ -103,10 +140,20 @@
         
         <!-- Final Screen with Dynamic Offer -->
         <div class="question" id="finalScreen" style="display:none;">
-          <h2 class="question-heading">Your Personalized Weight Loss Plan</h2>
+          <div class="final-container">
+            <div class="f1-c1" style="background-image: url(img/offer-gif-final.jfif);"></div>
+            <div class="f1-c2">
+              <h2 class="question-heading">Your Personalized Weight Loss Plan</h2>
           <p class="question-p" id="bmiResult"></p>
-          <p class="question-p" id="afterMessage"></p>
+          <p class="mainText">
+            It’s no secret that diet plans, exhausting gym sessions, and costly weight-loss pens are money-making schemes devised by the so-called 'trusted' health industry, keeping you trapped in a cycle of endless frustration. But what the mainstream media keeps hidden from you is a powerful weight-loss secret that Asian women have relied on for decades.
+<br><br>
+           This fat-burning trick is now the go-to method for top athletes, celebrities, and influencers of all shapes and sizes—and for the first time, it’s finally available to you.
+          </p>
           <button onclick="window.location.href='https://lipozem.com/vsl/'" class="nextButton">Watch Video Now</button>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>

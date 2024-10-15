@@ -12,23 +12,20 @@ function nextQuestion(questionNumber) {
   if (questionNumber + 1 <= totalQuestions) {
     document.getElementById('question' + (questionNumber + 1)).style.display = 'flex';
   } else {
-    showLoadingScreen(); // Show loading screen before final screen
+    showLoadingScreen(); 
   }
 
   updateProgressBar((questionNumber + 1) / totalQuestions * 100);
 }
 
 function showLoadingScreen() {
-  // Display the loading screen
   document.getElementById('loadingScreen').style.display = 'block';
   document.getElementById('progressBar').style.display = 'none';
 
-  // Update the loading message after a short delay
   setTimeout(() => {
     document.getElementById('loadingMessage').textContent = 'Preparing your results...';
   }, 2000);
 
-  // Show the final screen after loading
   setTimeout(() => {
     document.getElementById('loadingScreen').style.display = 'none';
     document.getElementById('finalScreen').style.display = 'block';
@@ -54,25 +51,20 @@ function calculateAndNext() {
 
   document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
 
-  // Get user input values
   const heightFeet = parseInt(document.getElementById('heightFeet').value);
   const heightInches = parseInt(document.getElementById('heightInches').value);
   const currentWeight = parseInt(document.getElementById('currentWeight').value);
   const desiredWeight = parseInt(document.getElementById('desiredWeight').value);
 
-  // Validate inputs
   if (isNaN(heightFeet) || isNaN(heightInches) || isNaN(currentWeight) || isNaN(desiredWeight)) {
     alert("Please fill in all fields correctly.");
     return;
   }
 
-  // Convert height to inches
   const totalHeightInches = (heightFeet * 12) + heightInches;
 
-  // Calculate BMI
   const bmi = (currentWeight / (totalHeightInches * totalHeightInches)) * 703;
 
-  // Prepare dynamic content for the offer
   let bmiCategory = '';
   if (bmi < 18.5) {
     bmiCategory = 'underweight';
@@ -85,28 +77,21 @@ function calculateAndNext() {
   }
 
   const bmiResultText = `Your BMI is ${bmi.toFixed(1)}, which is considered ${bmiCategory}.`;
-  const afterMessage = `Imagine yourself reaching your goal weight of ${desiredWeight} pounds. The changes can start today with our revolutionary method.`;
 
-  // Update the final screen with the personalized message
   document.getElementById('bmiResult').textContent = bmiResultText;
-  document.getElementById('afterMessage').textContent = afterMessage;
 
-  // Hide the height/weight input section and show the loading screen
   document.getElementById('question5').style.display = 'none';
   showLoadingScreen();
 }
 
 function showLoadingScreen() {
-  // Display the loading screen
   document.getElementById('loadingScreen').style.display = 'block';
   document.getElementById('progressBar').style.display = 'none';
 
-  // Update the loading message after a short delay
   setTimeout(() => {
     document.getElementById('loadingMessage').textContent = 'Preparing your results...';
   }, 2000);
 
-  // Show the final screen after loading
   setTimeout(() => {
     document.getElementById('loadingScreen').style.display = 'none';
     document.getElementById('finalScreen').style.display = 'block';
@@ -114,16 +99,13 @@ function showLoadingScreen() {
 }
 
 function showLoadingScreen() {
-  // Display the loading screen
   document.getElementById('loadingScreen').style.display = 'block';
   document.getElementById('progressBar').style.display = 'none';
 
-  // Update the loading message after a short delay
   setTimeout(() => {
     document.getElementById('loadingMessage').textContent = 'Preparing your results...';
   }, 2000);
 
-  // Show the final screen after loading
   setTimeout(() => {
     document.getElementById('loadingScreen').style.display = 'none';
     document.getElementById('finalScreen').style.display = 'block';
